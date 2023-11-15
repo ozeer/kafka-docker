@@ -25,6 +25,7 @@ ENV JAVA_HOME /opt/apache/jdk1.8.0_391
 ENV PATH $JAVA_HOME/bin:$PATH
 
 # 添加配置 kafka server(Kafka下载地址：https://downloads.apache.org/kafka/3.6.0/)
+# https://kafka.apache.org/downloads.html
 ENV KAFKA_VERSION 2.12-3.6.0
 ADD kafka_${KAFKA_VERSION}.tgz /opt/apache/
 ENV KAFKA_HOME /opt/apache/kafka
