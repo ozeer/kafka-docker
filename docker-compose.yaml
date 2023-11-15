@@ -1,5 +1,12 @@
 version: '3'
 services:
+  zookeeper:
+    hostname: zookeeper
+    image: zookeeper:latest
+    expose:
+    - "2181"
+    ports:
+    - "2181:2181"
   kafka-node1:
     image: hello-kafka
     user: "hadoop:hadoop"

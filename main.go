@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-
 	//1.生产者配置
 	config := sarama.NewConfig()
 	config.Producer.RequiredAcks = sarama.WaitForAll          //ACK,发送完数据需要leader和follow都确认
@@ -16,7 +15,7 @@ func main() {
 
 	//2.连接Kafka
 
-	client, err := sarama.NewSyncProducer([]string{"127.0.0.1:9092"}, config)
+	client, err := sarama.NewSyncProducer([]string{"127.0.0.1:39092"}, config)
 	if err != nil {
 		fmt.Println("Producer error", err)
 		return
